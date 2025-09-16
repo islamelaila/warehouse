@@ -57,17 +57,16 @@ src/main/webapp/...            → JSP views, CSS, and resources
 - Implement **Search & Filter** functionality  
 - Build **REST APIs** for integration  
 - Migrate to **Spring Boot & JPA**  
-- Containerize with **Docker** for deployment  
+- Containerize with **Docker** for deployment
 
 ---
 
+
 ## 📸 Screenshots 
+
 <img width="1897" height="976" alt="image" src="https://github.com/user-attachments/assets/163ddc0d-8c68-4ed6-917d-c81b7c6a44dc" />
-
 <img width="1868" height="968" alt="image" src="https://github.com/user-attachments/assets/a1822c82-954d-48b9-a81e-101eb88093a2" />
-
 <img width="1868" height="1336" alt="image" src="https://github.com/user-attachments/assets/99e426ef-ad98-4abb-b95c-158be3e8fa7a" />
-
 <img width="1883" height="956" alt="image" src="https://github.com/user-attachments/assets/00fa8661-22d1-4c57-ac65-80805a2fb5d5" />
 <img width="1844" height="940" alt="image" src="https://github.com/user-attachments/assets/55bfb998-e150-499b-88d5-47dd80e6e944" />
 
