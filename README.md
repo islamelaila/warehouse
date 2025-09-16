@@ -9,16 +9,18 @@ This project demonstrates my backend development skills, database integration, a
 
 ---
 
-## 🚀 Features
-✅ Add, edit, and delete items  
-✅ User authentication (login & signup)  
-✅ View all items in a styled table  
-✅ Database integration with **Oracle** (`ojdbc8.jar`)  
+🚀 Features
+✅ Add, edit, and delete items
+✅ User authentication (Login & Signup)
+✅ Session management (track logged-in users with HttpSession)
+✅ Cookies for remembering user info
+✅ View all items in a styled table
+✅ Database integration with Oracle (ojdbc8.jar)
 
 ---
 
 ## 🛠️ Tech Stack
-- **Backend:** Java (Servlets, JSP, JDBC)  
+- **Backend:** Java (Servlets, JSP, JDBC, HttpSession, Cookies)
 - **Database:** Oracle  
 - **Frontend:** JSP, HTML, CSS  
 - **IDE:** Eclipse  
@@ -59,18 +61,16 @@ src/main/webapp/...            → JSP views, CSS, and resources
 
 ---
 
-## 📸 Screenshots (Coming Soon)
-*(I will add screenshots of the running application here)*  
+## 📸 Screenshots 
+<img width="1897" height="976" alt="image" src="https://github.com/user-attachments/assets/163ddc0d-8c68-4ed6-917d-c81b7c6a44dc" />
 
----
+<img width="1868" height="968" alt="image" src="https://github.com/user-attachments/assets/a1822c82-954d-48b9-a81e-101eb88093a2" />
 
-## 👨‍💻 About Me
-Hi, I'm **Islam Omar** 👋 — a **Junior Backend Engineer** passionate about building scalable and maintainable applications using **Java, Spring, and Databases**.  
+<img width="1868" height="1336" alt="image" src="https://github.com/user-attachments/assets/99e426ef-ad98-4abb-b95c-158be3e8fa7a" />
 
-This project is part of my journey in the **Application Development & Integration** track, where I apply real-world concepts like MVC, authentication, and database connectivity.  
+<img width="1883" height="956" alt="image" src="https://github.com/user-attachments/assets/00fa8661-22d1-4c57-ac65-80805a2fb5d5" />
+<img width="1844" height="940" alt="image" src="https://github.com/user-attachments/assets/55bfb998-e150-499b-88d5-47dd80e6e944" />
 
-🌍 From: Egypt  
-💡 Interested in: Backend Development, Microservices, and AI Integration  
-📫 Connect with me: [LinkedIn](https://www.linkedin.com/) | [GitHub](https://github.com/islamelaila)  
 
----
+
+
