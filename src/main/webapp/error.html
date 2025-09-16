@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>حدث خطأ — Error</title>
+  <style>
+    :root{
+      --bg:#f8fafc;
+      --card:#ffffff;
+      --muted:#6b7280;
+      --accent:#ef4444;
+      --accent-600:#b91c1c;
+      --shadow: 0 10px 30px rgba(15,23,42,0.08);
+      --radius:14px;
+      font-family: Inter, 'Segoe UI', Tahoma, Arial, sans-serif;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:linear-gradient(180deg,var(--bg),#eef2f6 100%);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:24px;
+      color:#0f172a;
+    }
+
+    .card{
+      width:100%;
+      max-width:920px;
+      background:var(--card);
+      border-radius:var(--radius);
+      padding:28px;
+      box-shadow:var(--shadow);
+      display:grid;
+      grid-template-columns:1fr 420px;
+      gap:20px;
+      align-items:center;
+    }
+
+    .left{
+      padding-inline:8px;
+    }
+
+    h1{margin:0 0 8px 0; font-size:28px}
+    p{margin:0 0 16px 0; color:var(--muted); line-height:1.5}
+
+    .code{
+      display:inline-block;
+      background:#fff6f6;
+      color:var(--accent-600);
+      border:1px solid rgba(239,68,68,0.08);
+      padding:8px 12px;
+      border-radius:8px;
+      font-weight:600;
+      margin-bottom:12px;
+    }
+
+    .actions{display:flex; gap:12px; flex-wrap:wrap}
+    .btn{
+      padding:10px 14px;
+      border-radius:10px;
+      text-decoration:none;
+      font-weight:700;
+      cursor:pointer;
+      border:1px solid transparent;
+      display:inline-flex; align-items:center; gap:8px;
+    }
+    .btn.primary{background:linear-gradient(180deg,var(--accent),var(--accent-600)); color:white}
+    .btn.ghost{background:transparent; color:var(--accent-600); border-color:rgba(185,28,28,0.08)}
+
+    .right{
+      display:flex; align-items:center; justify-content:center; padding:12px;
+    }
+
+    /* simple illustrative SVG container */
+    .illustration{
+      width:100%; max-width:380px; height:260px; display:flex; align-items:center; justify-content:center;
+    }
+
+    svg{width:100%; height:100%;}
+
+    footer{margin-top:14px; color:var(--muted); font-size:13px}
+
+    @media (max-width:920px){
+      .card{grid-template-columns:1fr;}
+      .right{order:-1}
+    }
+  </style>
+</head>
+<body>
+  <main class="card" role="main">
+    <section class="left">
+      <h1>عذراً — حدث خطأ</h1>
+      <div class="code" id="errCode">خطأ 500</div>
+      <p id="errMsg">حدثت مشكلة أثناء معالجة طلبك. يمكنك المحاولة مرة أخرى أو العودة للصفحة السابقة. إذا استمرت المشكلة، تواصل مع الدعم.</p>
+
+      <div class="actions">
+        <a class="btn primary" id="retryBtn" href="#">حاول مرة أخرى</a>
+        <a class="btn ghost" id="backBtn" href="#">الصفحة السابقة</a>
+        <a class="btn" href="/" style="background:#f3f4f6; color:#0f172a; border-color:rgba(15,23,42,0.04);">الصفحة الرئيسية</a>
+      </div>
+
+      <footer>
+        <div>لو محتاج مساعدة: <a href="mailto:admin@example.com">admin@example.com</a></div>
+      </footer>
+    </section>
+
+    <aside class="right">
+      <div class="illustration" aria-hidden>
+        <!-- Simple friendly SVG illustration -->
+        <svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+          <defs>
+            <linearGradient id="g" x1="0" x2="1">
+              <stop offset="0" stop-color="#fff1f2" />
+              <stop offset="1" stop-color="#fee2e2" />
+            </linearGradient>
+          </defs>
+          <rect x="40" y="40" width="520" height="320" rx="18" fill="url(#g)" stroke="#fca5a5" stroke-width="2" />
+          <g transform="translate(140,120)">
+            <circle cx="80" cy="-10" r="36" fill="#fff" stroke="#f87171" stroke-width="3" />
+            <text x="80" y="-4" text-anchor="middle" font-size="28" fill="#b91c1c" font-weight="700">!</text>
+            <rect x="0" y="60" width="300" height="12" rx="6" fill="#fff" opacity="0.6" />
+            <rect x="0" y="86" width="260" height="12" rx="6" fill="#fff" opacity="0.6" />
+            <rect x="0" y="112" width="180" height="12" rx="6" fill="#fff" opacity="0.6" />
+          </g>
+        </svg>
+      </div>
+    </aside>
+  </main>
+
+  <script>
+    // Optional: replace with server-provided message/code if you render this page from the server.
+    (function(){
+      // If the server passes errorCode and errorMsg via query params (or set them with server-side template), fill them
+      const params = new URLSearchParams(window.location.search);
+      const code = params.get('code');
+      const msg = params.get('msg');
+      if(code) document.getElementById('errCode').textContent = decodeURIComponent(code);
+      if(msg) document.getElementById('errMsg').textContent = decodeURIComponent(msg);
+
+      document.getElementById('backBtn').addEventListener('click', function(e){
+        e.preventDefault(); window.history.back();
+      });
+
+      document.getElementById('retryBtn').addEventListener('click', function(e){
+        e.preventDefault(); window.location.reload();
+      });
+    })();
+  </script>
+</body>
+</html>
