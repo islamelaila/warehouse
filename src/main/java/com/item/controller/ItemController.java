@@ -20,15 +20,6 @@ import com.item.service.ItemService;
 import com.item.service.impl.ItemServiceImpl;
 
 
-// http://localhost:8080/item-service/itemController
-//http://localhost:8080/item-service/itemController?action=getItems
-//http://localhost:8080/item-service/itemController?action=getItem
-//http://localhost:8080/item-service/itemController?action=addItems
-//http://localhost:8080/item-service/itemController?action=editItem
-//http://localhost:8080/item-service/itemController?action=deleteItems
-//http://localhost:8080/item-service/itemController?action=kjdjkjsdk
-
-
 @WebServlet("/itemController")
 public class ItemController extends HttpServlet {
     
