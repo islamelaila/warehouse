@@ -24,14 +24,12 @@ body{
   -moz-osx-font-smoothing:grayscale;
 }
 
-/* layout */
 .page{
   width:100%;
   max-width:480px;
   margin-inline:auto;
 }
 
-/* card */
 .card{
   background:var(--card);
   border-radius:var(--radius);
@@ -46,7 +44,6 @@ body{
   letter-spacing:-0.2px;
 }
 
-/* fields */
 .field{
   margin-bottom:14px;
 }
@@ -73,7 +70,6 @@ input:focus{
   box-shadow:0 6px 18px rgba(37,99,235,0.08);
 }
 
-/* price row with unit */
 .input-row{
   display:flex;
   align-items:center;
@@ -89,7 +85,6 @@ input:focus{
   color:var(--muted);
 }
 
-/* actions */
 .actions{
   display:flex;
   gap:10px;
@@ -115,7 +110,6 @@ input:focus{
   border-color:rgba(37,99,235,0.12);
 }
 
-/* errors & message */
 .error{
   display:block;
   color:var(--danger);
@@ -138,7 +132,6 @@ input:focus{
   border-color: rgba(6,95,70,0.08);
 }
 
-/* responsiveness */
 @media (max-width:420px){
   .card{padding:16px}
   .card__title{font-size:18px}
