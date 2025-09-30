@@ -6,6 +6,8 @@ public class Item {
 	private String name ;
 	private double price ;
 	private Long totalNumber ;
+	private ItemDetails itemDetails ;
+	
 	
 	
 	public Item() {
@@ -27,6 +29,19 @@ public class Item {
 		this.name = name;
 		this.price = price;
 		this.totalNumber = totalNumber;
+	}
+	
+	
+	
+
+
+	public ItemDetails getItemDetails() {
+		return itemDetails;
+	}
+
+
+	public void setItemDetails(ItemDetails itemDetails) {
+		this.itemDetails = itemDetails;
 	}
 
 
